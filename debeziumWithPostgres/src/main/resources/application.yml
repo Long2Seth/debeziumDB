@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-service-debezium
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/debezium-postgres?createDatabaseIfNotExist=true
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 9090

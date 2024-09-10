@@ -1,0 +1,17 @@
+{
+  "name": "debezium_master_connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "54323",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "debezium-postgres",
+    "database.server.name": "postgres",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "table.include.list": "public.users",
+    "slot.name": "dbz_customerdb_listener",
+    "publication.autocreate.mode": "all_tables"
+  }
+}
